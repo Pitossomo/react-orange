@@ -25,6 +25,22 @@
   text-align: right;
 }
 
+.display p {
+  margin: 16px 4px;
+  word-wrap: unset;
+}
+
+.equation {
+  font-size: 1.3rem;
+}
+
+.result {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+
 .buttons {
   background-color: lightcoral;
 }

@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  padding: 4px;
+  width: 200px;
+  height: 350px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
+  background-color: gray;
+  border: 2px solid gray;
+}
+
+.display {
+  grid-column: 1 / 5;
+  border: 1px inset gray;
+  background-color: bisque;
+}
+
+.buttons {
+  background-color: lightcoral;
+}

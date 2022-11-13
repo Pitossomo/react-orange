@@ -21,6 +21,8 @@
   grid-column: 1 / 5;
   border: 1px inset gray;
   background-color: bisque;
+  color: black;
+  text-align: right;
 }
 
 .buttons {

@@ -44,8 +44,8 @@ export default function GihubWiki () {
     
   }
 
-  const handleRemove = () => {
-    console.log("removed")
+  const handleRemove = (id:string) => {
+    setRepos(prev => prev.filter(repo => repo.id !== id))
   }
 
   return (
@@ -58,9 +58,9 @@ export default function GihubWiki () {
         { repos.map(repo => (
           <div key={repo.full_name}>
             <h1>{repo.full_name}</h1>
-            <p></p>
-            <a href={repo.html_url} rel="noreferrer" target="_blank">{repo.html_url}</a>
-            <p>{repo.author}</p>
+            <p>{repo.html_url}</p>
+            <a href={repo.html_url} rel="noreferrer" target="_blank">Ver repositório</a>
+            <a href="#" onClick={e => handleRemove(repo.id)}>Remover</a>
             <hr />
           </div>
         ))}

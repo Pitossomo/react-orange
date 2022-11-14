@@ -5,8 +5,9 @@ import githubLogo from '../imgs/github.png'
 import Image from "next/image"
 
 type Repository = {
-  name: string,
-  url: string,
+  id: string,
+  full_name: string,
+  html_url: string,
   author: string
 } 
 
@@ -19,11 +20,28 @@ export default function GihubWiki () {
   }
 
   const handleSearch = async () => {
-    const {data} = await api.get(`repos/${currentRepo}`)
-    
-    if(data.id) {
-      setRepos(prev => [...prev, data])
+    try {
+      const {data} = await api.get(`repos/${currentRepo}`)
+      
+      const isRepoOnScreen = repos.find(repo => repo.id === data.id)
+      if (isRepoOnScreen) {
+        alert("Repo already on screen")
+        return;
+      }
+  
+      setRepos(prev => [...prev,
+        {
+          id: data.id,
+          full_name: data.full_name,
+          html_url: data.html_url,
+          author: data.author
+        }
+      ])
+      setCurrentRepo("")  
+    } catch (error) {
+      alert("Error. Repository not found")
     }
+    
   }
 
   const handleRemove = () => {
@@ -38,9 +56,10 @@ export default function GihubWiki () {
         <button className={styles.searchBtn} onClick={handleSearch}>Buscar</button>
 
         { repos.map(repo => (
-          <div key={repo.name}>
-            <h1>{repo.name}</h1>
-            <a href={repo.url}>{repo.url}</a>
+          <div key={repo.full_name}>
+            <h1>{repo.full_name}</h1>
+            <p></p>
+            <a href={repo.html_url} rel="noreferrer" target="_blank">{repo.html_url}</a>
             <p>{repo.author}</p>
             <hr />
           </div>

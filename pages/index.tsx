@@ -27,10 +27,10 @@ export default function Home() {
             <p>Interface gráfica para resolução de equações</p>
           </Link>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <Link href="/githubWiki" className={styles.card}>
+            <h2>Github Wiki &rarr;</h2>
+            <p>Busca de repositório no Github</p>
+          </Link>
 
           <a
             href="https://github.com/vercel/next.js/tree/canary/examples"

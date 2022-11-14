@@ -7,12 +7,51 @@
   height: 100vh;
 }
 
+.logo {
+  margin: 16px;
+}
+
 .input {
   height: 2rem;
+  margin: 8px;
 }
 
 .searchBtn {
   height: 2rem;
   background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 8px;
 }
 
+.repository {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  padding: 16px;
+  box-shadow: 1px 1px 3px white;
+}
+
+.name {
+  padding: 0;
+  margin: 0;
+}
+
+.full_name {
+  margin: 0;
+  padding-bottom: 1rem;;
+  font-size: 1rem;
+}
+
+.repository a {
+  text-decoration: underline;
+}
+
+.seeRepo {
+  color: cornflowerblue;
+}
+
+.removeRepo {
+  color: coral;
+}

@@ -1,0 +1,19 @@
+.alert {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid coral;
+  border-radius: 4px;
+  color: coral;
+}
+
+.alert span {
+  padding: 4px 8px;
+}
+
+.alert .close {
+  background-color: coral;
+  color: black;
+  cursor: pointer;
+}

@@ -63,7 +63,6 @@
 .formHeader {
   font-size: 32px;
   width: 700;
-  padding: 0;
   margin: 4px;
 }
 
@@ -82,5 +81,25 @@
   stroke: #8647AD;
   fill: #8647AD;
   stroke-width: "0";
+}
+
+.formButton {
+  width: 264px;
+  height: 29px;
+  background-color: #E4105D;
+  border-radius: 27px;
+  border: none;
+  outline: 1px solid #E4105D;
+  outline-offset: 6px;
+  margin: 6px;
+  margin-top: 45px;
+}
+
+.strong {
+  
+}
+
+.greenText {
+  color: #23DD7A
 }
 

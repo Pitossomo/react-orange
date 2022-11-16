@@ -3,6 +3,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import styles from "../styles/Login.module.scss"
 import InputWrapper from "../components/Login/InputWrapper";
+import Head from "next/head";
 
 const schema = yup.object({
   email: yup
@@ -26,6 +27,9 @@ export default function Login () {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Orange Tech + | Login Example Page</title>
+      </Head>
       <form className={styles.form}>
         <h1 className={styles.title}>Login</h1>
         <InputWrapper 

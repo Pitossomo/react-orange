@@ -4,6 +4,7 @@ import {api} from '../services/githubAPI'
 import githubLogo from '../imgs/github.png'
 import Image from "next/image"
 import Alert from "../components/GithubWiki/Alert"
+import Head from "next/head"
 
 type Repository = {
   id: string,
@@ -48,6 +49,9 @@ export default function GihubWiki () {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Orange Tech + | Calculadora</title>
+      </Head>
       <>
         <h1>Busca de repositórios no GitHub</h1>
         <Image className={styles.logo} src={githubLogo} alt="githubLogo" height={72} />

@@ -7,6 +7,7 @@ export default function CadastroDIO() {
   return (
     <div className={styles.container}>
       <Head>
+        <title>Orange Tech + | Cadastro DIO</title>
         <style>
           @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
         </style>

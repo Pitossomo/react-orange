@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "../components/Calculadora/Button";
 import styles from "../styles/Calculadora.module.css";
 import { create, all } from 'mathjs';
+import Head from "next/head";
 
 const config = { }
 const math = create(all, config)
@@ -85,6 +86,9 @@ export default function Calculadora() {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Orange Tech + | Cadastro DIO</title>
+      </Head>
       <div className={styles.calculator}>
         <div className={styles.display}>
           <p className={styles.equation}>{equation}</p>

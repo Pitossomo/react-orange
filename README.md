@@ -5,9 +5,10 @@ Repository deployed in http://react-orange-bootcamp.vercel.app/
 Made for Orange Tech + Bootcamp, a partnership between DIO & Banco Inter
 Developed in React, Typescript, NextJS and Vercel
 
-The repository contains (for now) 2 projects suggested by the instructor and improved by me:
+The repository contains (for now) 3 projects suggested by the instructor and improved by me:
 - A functional calculator that uses MathJS library to parse equations 
 - A github searcher with a component for showing alerts
+- A clone for DIO's Sign-up Screen 
 
 Each project was made after watching the instructor explain the app to be made, focusing on implementing at least the same functionalities suggested by the instructor.
 

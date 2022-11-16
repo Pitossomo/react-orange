@@ -1,3 +1,9 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
 .navbar {
   position: absolute;
   top: 6px;
@@ -5,7 +11,8 @@
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  padding: 8px 60px 16px 60px;
+  align-items: center;
+  padding: 8px 60px 12px 60px;
   background-color: #151515;
   color: white;
   font-size: 18px;
@@ -21,6 +28,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 22px;
   border-radius: 11px;
   width: 120px;
   background-color: #565656;
@@ -63,18 +71,30 @@
 .formHeader {
   font-size: 32px;
   width: 700;
-  margin: 4px;
+}
+
+.formDescription {
+  margin: 8px 0 24px 0;
 }
 
 .inputWrapper {
   width: 275px;
+  height: 30px;
   border-bottom: 1px solid #3B3450;
-  margin: 8px;
+  margin-top: 18px;
 }
 
 .input {
+  margin-left: 8px;
+  font-size: 18px;
   background-color: #1E192C;
   border: none;
+  color: white;
+  
+}
+
+.input:focus{
+  outline: none;
 }
 
 .icon {
@@ -93,10 +113,12 @@
   outline-offset: 6px;
   margin: 6px;
   margin-top: 45px;
+  margin-bottom: 33px;
+  font-size: 18px;
 }
 
 .strong {
-  
+  margin-top: 12px;
 }
 
 .greenText {

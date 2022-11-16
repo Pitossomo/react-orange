@@ -1,13 +1,19 @@
 import Image from "next/image"
 import styles from "../styles/CadastroDIO.module.scss"
 import dioLogo from "../imgs/DIO.svg" 
+import Head from "next/head"
 
 export default function CadastroDIO() {
   return (
     <div className={styles.container}>
+      <Head>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+        </style>
+      </Head>
       <nav className={styles.navbar}>
         <a href="https://dio.me" target="_blank">
-          <Image src={dioLogo} alt="DIO logo" height={24} />
+          <Image src={dioLogo} alt="DIO logo" height={28} />
         </a>
         <div className={styles.links}>
           <a className={styles.homeLink} href="#">Home</a>
@@ -26,7 +32,7 @@ export default function CadastroDIO() {
         <div className={styles.mainHalf}>
           <form className={styles.form}>
             <h1 className={styles.formHeader}>Comece agora grátis</h1>
-            <p>Crie sua conta e make the change._</p>
+            <p className={styles.formDescription}>Crie sua conta e make the change._</p>
             <div className={styles.inputWrapper}>
               <svg className={styles.icon} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"   height="1em" width="1em">
                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
@@ -43,7 +49,7 @@ export default function CadastroDIO() {
               <svg className={styles.icon} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"   height="1em" width="1em">
                 <path d="M18 8h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h2V7a6 6 0 1 1 12 0v1zm-2 0V7a4 4 0 1 0-8 0v1h8zm-5 6v2h2v-2h-2zm-4 0v2h2v-2H7zm8 0v2h2v-2h-2z"></path>
               </svg>
-              <input className={styles.input} placeholder="Password"></input>
+              <input type="password" className={styles.input} placeholder="Password"></input>
             </div>
             <button className={styles.formButton}>Criar minha conta</button>
             <p>
@@ -55,8 +61,6 @@ export default function CadastroDIO() {
           </form>
         </div>
       </main>
-
-
     </div>
   )
 }

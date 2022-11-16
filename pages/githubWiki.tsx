@@ -3,7 +3,7 @@ import styles from "../styles/GithubWiki.module.css"
 import {api} from '../services/githubAPI'
 import githubLogo from '../imgs/github.png'
 import Image from "next/image"
-import Alert from "../components/Alert"
+import Alert from "../components/GithubWiki/Alert"
 
 type Repository = {
   id: string,

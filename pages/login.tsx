@@ -1,31 +1,44 @@
-
 import { useForm } from "react-hook-form"
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
 import styles from "../styles/Login.module.scss"
+import InputWrapper from "../components/Login/InputWrapper";
+
+const schema = yup.object({
+  email: yup
+    .string()
+    .email('E-mail inválido')
+    .required('Campo obrigatório'),
+  password: yup
+    .string()
+    .min(6, 'Mínimo 6 caracteres')
+    .required('Campo obrigatório')
+}).required()
 
 export default function Login () {
-  const { 
-    register,
-    watch,
-    formState: {errors, isValid },
-  } = useForm()
+  const { register, formState: {errors} } = useForm({
+    resolver: yupResolver(schema),
+    mode: 'onBlur',
+    reValidateMode: 'onChange'
+  })
 
-  const form = watch()
-  console.log(form)
+  console.log(errors)
 
   return (
     <div className={styles.container}>
       <form className={styles.form}>
         <h1 className={styles.title}>Login</h1>
-        <input 
-          className={styles.input}
-          placeholder="Usuário"
-          {...register("email")}
+        <InputWrapper 
+          placeholder='Usuário'
+          name='email'
+          register={register}
+          errors = {errors} 
         />
-        <input
-          className={styles.input}
-          placeholder="Senha"
-          type="password"
-          {...register("password")}
+        <InputWrapper 
+          placeholder='Senha'
+          name='password'
+          register={register}
+          errors = {errors} 
         />
         <button className={styles.button}>Entrar</button>
       </form>

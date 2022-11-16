@@ -1,4 +1,4 @@
-import styles from "../styles/Alert.module.css"
+import styles from "../../styles/Alert.module.css"
 
 type AlertProps = {
   message: string,

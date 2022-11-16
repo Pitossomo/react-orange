@@ -17,21 +17,12 @@ $base-color: #660099;
   border-radius: 16px;
   padding: 16px;
   width: 300px;
-  height: 220px;
+  height: 300px;
 }
 
 .title {
   color: $base-color;
   font-size: 32px;
-}
-
-.input {
-  height: 32px;
-  border-radius: 16px;
-  padding: 8px;
-  background-color: white;
-  border: 1px solid gray;
-  color: gray;
 }
 
 .button {
@@ -43,6 +34,3 @@ $base-color: #660099;
   display: flex;
   justify-content: center;
 }
-
-
-

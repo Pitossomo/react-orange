@@ -37,20 +37,12 @@ export default function Home() {
             <p>Clone da tela de cadastro da DIO</p>
           </Link>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <Link href="/login" className={styles.card}>
+            <h2>Tela de Login &rarr;</h2>
+            <p>Exemplo de tela de login com validação</p>
+          </Link>
         </div>
       </main>
-
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"

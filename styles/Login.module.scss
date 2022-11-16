@@ -1,0 +1,48 @@
+$base-color: #660099;
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: $base-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 16px;
+  padding: 16px;
+  width: 300px;
+  height: 220px;
+}
+
+.title {
+  color: $base-color;
+  font-size: 32px;
+}
+
+.input {
+  height: 32px;
+  border-radius: 16px;
+  padding: 8px;
+  background-color: white;
+  border: 1px solid gray;
+  color: gray;
+}
+
+.button {
+  background-color: $base-color;
+  height: 32px;
+  border: none;
+  border-radius: 16px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
